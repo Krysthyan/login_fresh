@@ -11,7 +11,7 @@ Follow the install instructions [here](https://pub.dev/packages/login_fresh/inst
 First you need to download the github repository and run the following commands:
 ```bash
 git clone https://github.com/Krysthyan/login_fresh.git
-cd login_fresh/demo
+cd login_fresh/example
 flutter run
 ```
 
