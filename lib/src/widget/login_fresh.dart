@@ -25,24 +25,18 @@ class LoginFresh extends StatefulWidget {
   LoginFreshWords keyWord;
 
   LoginFresh(
-      {
-        @required this.pathLogo,
-        this.typeLoginModel,
-        this.isExploreApp,
-        this.functionExploreApp,
-
-        this.isSignUp,
-        this.widgetSignUp,
-
-        this.isFooter,
-        this.widgetFooter,
-        this.backgroundColor,
-
-        this.cardColor,
-        this.textColor,
-        this.keyWord
-      }
-      );
+      {@required this.pathLogo,
+      this.typeLoginModel,
+      this.isExploreApp,
+      this.functionExploreApp,
+      this.isSignUp,
+      this.widgetSignUp,
+      this.isFooter,
+      this.widgetFooter,
+      this.backgroundColor,
+      this.cardColor,
+      this.textColor,
+      this.keyWord});
 
   @override
   _LoginFreshState createState() => _LoginFreshState();
@@ -92,19 +86,21 @@ class _LoginFreshState extends State<LoginFresh> {
                     children: [
                       buildLoginWith(),
                       buildTypeLogin(context),
-
-                      (widget.isExploreApp == null || widget.isExploreApp == false) ? SizedBox() : SizedBox(height: 20,),
-
+                      (widget.isExploreApp == null ||
+                              widget.isExploreApp == false)
+                          ? SizedBox()
+                          : SizedBox(
+                              height: 20,
+                            ),
                       buildExploreApp(context),
-
-
-                      (widget.isSignUp == null || widget.isSignUp == false)? SizedBox( ): buildSignUp(),
+                      (widget.isSignUp == null || widget.isSignUp == false)
+                          ? SizedBox()
+                          : buildSignUp(),
                     ],
                   ),
-
-                  (widget.isFooter == null || widget.isFooter == false) ? SizedBox(): widget.widgetFooter
-
-
+                  (widget.isFooter == null || widget.isFooter == false)
+                      ? SizedBox()
+                      : widget.widgetFooter
                 ],
               ),
             ))
@@ -114,74 +110,45 @@ class _LoginFreshState extends State<LoginFresh> {
 
   GestureDetector buildSignUp() {
     return GestureDetector(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 25, horizontal: 10),
-                    child: RichText(
-                      textAlign: TextAlign.center,
-                      text: TextSpan(children: [
-                        TextSpan(
-                            text: widget.keyWord.notAccount  + '\n',
-                            style: TextStyle(
-                                color: widget.textColor ?? Color(0xFF0F2E48),
-                                fontWeight: FontWeight.normal,
-                                fontSize: 15)),
-                        TextSpan(
-                            text: widget.keyWord.signUp,
-                            style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: widget.textColor ?? Color(0xFF0F2E48),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16)),
-                      ]),
-                    ),
-                  ),
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (_buildContext) => widget.widgetSignUp));
-
-                  },
-                );
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
+        child: RichText(
+          textAlign: TextAlign.center,
+          text: TextSpan(children: [
+            TextSpan(
+                text: widget.keyWord.notAccount + '\n',
+                style: TextStyle(
+                    color: widget.textColor ?? Color(0xFF0F2E48),
+                    fontWeight: FontWeight.normal,
+                    fontSize: 15)),
+            TextSpan(
+                text: widget.keyWord.signUp,
+                style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    color: widget.textColor ?? Color(0xFF0F2E48),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16)),
+          ]),
+        ),
+      ),
+      onTap: () {
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (_buildContext) => widget.widgetSignUp));
+      },
+    );
   }
 
   Widget buildExploreApp(BuildContext context) {
-    return (widget.isExploreApp == null || widget.isExploreApp == false) ? SizedBox() :
-                GestureDetector(
-                  onTap: widget.functionExploreApp,
-                  child: SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.07,
-                      width: (widget.typeLoginModel.length > 3)
-                          ? MediaQuery.of(context).size.width * 0.90
-                          : MediaQuery.of(context).size.width * 0.80,
-                      child: Card(
-                          elevation: 10,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(40),
-                          ),
-                          color: Colors.white,
-                          child: Padding(
-                            padding:
-                            const EdgeInsets.symmetric(horizontal: 10),
-                            child: Center(
-                                child: Text(
-                                  widget.keyWord.exploreApp,
-                                  style: TextStyle(
-                                      color:
-                                      widget.textColor ?? Color(0xFF0F2E48),
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                )),
-                          ))),
-                );
-  }
-
-  SizedBox buildTypeLogin(BuildContext context) {
-    return SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.1,
-                  width: (widget.typeLoginModel.length > 3)
-                      ? MediaQuery.of(context).size.width * 0.90
-                      : MediaQuery.of(context).size.width * 0.80,
-                  child: Card(
+    return (widget.isExploreApp == null || widget.isExploreApp == false)
+        ? SizedBox()
+        : GestureDetector(
+            onTap: widget.functionExploreApp,
+            child: SizedBox(
+                height: MediaQuery.of(context).size.height * 0.07,
+                width: (widget.typeLoginModel.length > 3)
+                    ? MediaQuery.of(context).size.width * 0.90
+                    : MediaQuery.of(context).size.width * 0.80,
+                child: Card(
                     elevation: 10,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(40),
@@ -189,25 +156,51 @@ class _LoginFreshState extends State<LoginFresh> {
                     color: Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.max,
-                          children: this.getCardLogin()),
-                    ),
-                  ),
-                );
+                      child: Center(
+                          child: Text(
+                        widget.keyWord.exploreApp,
+                        style: TextStyle(
+                            color: widget.textColor ?? Color(0xFF0F2E48),
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
+                      )),
+                    ))),
+          );
+  }
+
+  SizedBox buildTypeLogin(BuildContext context) {
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * 0.1,
+      width: (widget.typeLoginModel.length > 3)
+          ? MediaQuery.of(context).size.width * 0.90
+          : MediaQuery.of(context).size.width * 0.80,
+      child: Card(
+        elevation: 10,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(40),
+        ),
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: this.getCardLogin()),
+        ),
+      ),
+    );
   }
 
   Padding buildLoginWith() {
     return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(widget.keyWord.loginWith,
-                      style: TextStyle(
-                          color: widget.textColor ?? Color(0xFF0F2E48),
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold)),
-                );
+      padding: const EdgeInsets.all(8.0),
+      child: Text(widget.keyWord.loginWith,
+          style: TextStyle(
+              color: widget.textColor ?? Color(0xFF0F2E48),
+              fontSize: 16,
+              fontWeight: FontWeight.bold)),
+    );
   }
 
   List<Widget> getCardLogin() {
@@ -226,7 +219,7 @@ class _LoginFreshState extends State<LoginFresh> {
             ),
           ),
         ),
-        onTap: (){
+        onTap: () {
           tlm.callFunction(context);
         },
       ));

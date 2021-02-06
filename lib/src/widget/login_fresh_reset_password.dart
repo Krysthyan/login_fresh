@@ -20,8 +20,8 @@ class LoginFreshResetPassword extends StatefulWidget {
 
   LoginFreshResetPassword(
       {@required this.funResetPassword,
-        this.isFooter,
-        this.widgetFooter,
+      this.isFooter,
+      this.widgetFooter,
       this.backgroundColor,
       this.textColor,
       this.loginFreshWords,
@@ -42,7 +42,9 @@ class _LoginFreshResetPasswordState extends State<LoginFreshResetPassword> {
 
   @override
   Widget build(BuildContext context) {
-    loginFreshWords = (widget.loginFreshWords == null) ? LoginFreshWords() : widget.loginFreshWords;
+    loginFreshWords = (widget.loginFreshWords == null)
+        ? LoginFreshWords()
+        : widget.loginFreshWords;
     return Scaffold(
       appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.white),
@@ -175,10 +177,8 @@ class _LoginFreshResetPasswordState extends State<LoginFreshResetPassword> {
                   )
                 : GestureDetector(
                     onTap: () {
-
-                      widget.funResetPassword(context, this.setIsRequest, this._textEditingControllerUser.text);
-
-
+                      widget.funResetPassword(context, this.setIsRequest,
+                          this._textEditingControllerUser.text);
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -209,7 +209,9 @@ class _LoginFreshResetPasswordState extends State<LoginFreshResetPassword> {
           ],
         ),
         SizedBox(),
-        (widget.isFooter == null || widget.isFooter == false)? SizedBox(): widget.widgetFooter
+        (widget.isFooter == null || widget.isFooter == false)
+            ? SizedBox()
+            : widget.widgetFooter
       ],
     );
   }

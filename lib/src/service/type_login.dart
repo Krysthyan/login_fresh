@@ -1,4 +1,3 @@
-
 class TypeLogo {
   static String FACEBOOK = 'assets/images_login_fresh_34_/facebook.png';
   static String GOOGLE = 'assets/images_login_fresh_34_/google.png';
@@ -7,11 +6,8 @@ class TypeLogo {
 }
 
 class LoginFreshTypeLoginModel {
-
   Function callFunction;
   String logo;
 
   LoginFreshTypeLoginModel({this.logo, this.callFunction});
-
-
 }

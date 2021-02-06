@@ -28,20 +28,20 @@ class LoginFreshUserAndPassword extends StatefulWidget {
       this.logo,
       this.isFooter,
       this.widgetFooter,
-
       this.isResetPassword,
       this.widgetResetPassword,
-
       this.isSignUp,
       this.signUp,
       this.textColor});
 
   @override
-  _LoginFreshUserAndPasswordState createState() => _LoginFreshUserAndPasswordState();
+  _LoginFreshUserAndPasswordState createState() =>
+      _LoginFreshUserAndPasswordState();
 }
 
 class _LoginFreshUserAndPasswordState extends State<LoginFreshUserAndPassword> {
-  TextEditingController _textEditingControllerPassword = TextEditingController();
+  TextEditingController _textEditingControllerPassword =
+      TextEditingController();
   TextEditingController _textEditingControllerUser = TextEditingController();
 
   bool isNoVisiblePassword = true;
@@ -56,8 +56,9 @@ class _LoginFreshUserAndPasswordState extends State<LoginFreshUserAndPassword> {
 
   @override
   Widget build(BuildContext context) {
-
-    loginFreshWords = (widget.loginFreshWords == null) ? LoginFreshWords() : widget.loginFreshWords;
+    loginFreshWords = (widget.loginFreshWords == null)
+        ? LoginFreshWords()
+        : widget.loginFreshWords;
 
     return Scaffold(
       appBar: AppBar(
@@ -129,7 +130,9 @@ class _LoginFreshUserAndPasswordState extends State<LoginFreshUserAndPassword> {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
-        SizedBox(height: 0,),
+        SizedBox(
+          height: 0,
+        ),
         Expanded(
           child: SingleChildScrollView(
             child: Column(
@@ -137,7 +140,9 @@ class _LoginFreshUserAndPasswordState extends State<LoginFreshUserAndPassword> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                SizedBox(height: 30,),
+                SizedBox(
+                  height: 30,
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: TextField(
@@ -259,13 +264,11 @@ class _LoginFreshUserAndPasswordState extends State<LoginFreshUserAndPassword> {
                       )
                     : GestureDetector(
                         onTap: () {
-
                           widget.callLogin(
                               context,
                               setIsRequest,
                               this._textEditingControllerUser.text,
                               this._textEditingControllerPassword.text);
-
                         },
                         child: SizedBox(
                             height: MediaQuery.of(context).size.height * 0.07,
@@ -278,10 +281,11 @@ class _LoginFreshUserAndPasswordState extends State<LoginFreshUserAndPassword> {
                                 color:
                                     widget.backgroundColor ?? Color(0xFFE7004C),
                                 child: Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(horizontal: 10),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10),
                                   child: Center(
-                                      child: Text(this.loginFreshWords.login,
+                                      child: Text(
+                                    this.loginFreshWords.login,
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 15,
@@ -289,40 +293,44 @@ class _LoginFreshUserAndPasswordState extends State<LoginFreshUserAndPassword> {
                                   )),
                                 ))),
                       ),
-
-                (widget.isResetPassword == null || widget.isResetPassword == false) ? SizedBox() :
+                (widget.isResetPassword == null ||
+                        widget.isResetPassword == false)
+                    ? SizedBox()
+                    : GestureDetector(
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 25, left: 10, right: 10),
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(children: [
+                              TextSpan(
+                                  text: '',
+                                  style: TextStyle(
+                                      color:
+                                          widget.textColor ?? Color(0xFF0F2E48),
+                                      fontWeight: FontWeight.normal,
+                                      fontSize: 15)),
+                              TextSpan(
+                                  text: this.loginFreshWords.recoverPassword,
+                                  style: TextStyle(
+                                      decoration: TextDecoration.underline,
+                                      color:
+                                          widget.textColor ?? Color(0xFF0F2E48),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16)),
+                            ]),
+                          ),
+                        ),
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => widget.widgetResetPassword,
+                          ));
+                        },
+                      ),
                 GestureDetector(
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 25, left: 10, right: 10),
-                    child: RichText(
-                      textAlign: TextAlign.center,
-                      text: TextSpan(children: [
-                        TextSpan(
-                            text: '',
-                            style: TextStyle(
-                                color: widget.textColor ?? Color(0xFF0F2E48),
-                                fontWeight: FontWeight.normal,
-                                fontSize: 15)),
-                        TextSpan(
-                            text: this.loginFreshWords.recoverPassword,
-                            style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: widget.textColor ?? Color(0xFF0F2E48),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16)),
-                      ]),
-                    ),
-                  ),
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => widget.widgetResetPassword,
-                    ));
-                  },
-                ),
-                GestureDetector(
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 15, horizontal: 10),
                     child: RichText(
                       textAlign: TextAlign.center,
                       text: TextSpan(children: [
@@ -344,7 +352,7 @@ class _LoginFreshUserAndPasswordState extends State<LoginFreshUserAndPassword> {
                   ),
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_buildContext) => widget.signUp));
+                        builder: (_buildContext) => widget.signUp));
                   },
                 ),
               ],
@@ -353,11 +361,10 @@ class _LoginFreshUserAndPasswordState extends State<LoginFreshUserAndPassword> {
         ),
         Align(
           alignment: Alignment.bottomCenter,
-          child:  (widget.isFooter == null || widget.isFooter == false)
+          child: (widget.isFooter == null || widget.isFooter == false)
               ? SizedBox()
               : widget.widgetFooter,
         ),
-
       ],
     );
   }

@@ -6,12 +6,10 @@ class SignUpModel {
   String name;
   String surname;
 
-
-  SignUpModel({
-    this.email,
-    this.password,
-    this.repeatPassword,
-    this.name,
-    this.surname
-  });
+  SignUpModel(
+      {this.email,
+      this.password,
+      this.repeatPassword,
+      this.name,
+      this.surname});
 }
