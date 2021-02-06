@@ -32,8 +32,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  login_fresh:
-    login_fresh: ^1.0.7
+
+  login_fresh: ^1.0.7
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
