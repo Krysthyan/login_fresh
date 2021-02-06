@@ -15,10 +15,14 @@ cd login_fresh/demo
 flutter run
 ```
 
-![image](screenshot/image1.jpeg)
-![image](screenshot/image2.jpeg)
-![image](screenshot/image3.jpeg)
-![image](screenshot/image4.jpeg)
+![image](screenshot/image1.jpeg)         | ![image](screenshot/image2.jpeg)
+:-------------------------:|:-------------------------:
+![image](screenshot/image3.jpeg) |  ![image](screenshot/image4.jpeg)
+
+
+
+
+
 
 ## Languages docs
 
