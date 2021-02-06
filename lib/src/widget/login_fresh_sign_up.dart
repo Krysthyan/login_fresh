@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:login_fresh/login_fresh.dart';
-import 'package:login_fresh/src/config/language.dart';
+import 'login_fresh_loading.dart';
+import '../config/language.dart';
+import '../service/sign_up_model.dart';
+
+
+
+
 
 class LoginFreshSignUp extends StatefulWidget {
   final Color backgroundColor;

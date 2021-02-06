@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login_fresh/src/config/language.dart';
-import 'package:login_fresh/src/widget/login_fresh_loading.dart';
-import 'package:login_fresh/src/widget/login_fresh_reset_password.dart';
+
+import '../config/language.dart';
+import 'login_fresh_loading.dart';
 
 class LoginFreshUserAndPassword extends StatefulWidget {
   final Color backgroundColor;

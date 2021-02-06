@@ -1,8 +1,8 @@
 class TypeLogo {
-  static String FACEBOOK = 'assets/images_login_fresh_34_/facebook.png';
-  static String GOOGLE = 'assets/images_login_fresh_34_/google.png';
-  static String APPLE = 'assets/images_login_fresh_34_/apple.png';
-  static String USER_PASSWORD = 'assets/images_login_fresh_34_/user_password.png';
+  static String facebook = 'assets/images_login_fresh_34_/facebook.png';
+  static String google = 'assets/images_login_fresh_34_/google.png';
+  static String apple = 'assets/images_login_fresh_34_/apple.png';
+  static String userPassword = 'assets/images_login_fresh_34_/user_password.png';
 }
 
 class LoginFreshTypeLoginModel {

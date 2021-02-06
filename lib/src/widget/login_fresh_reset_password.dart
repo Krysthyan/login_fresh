@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login_fresh/src/config/language.dart';
 
-import 'login_fresh_loading.dart';
+import './login_fresh_loading.dart';
+import '../config/language.dart';
 
 class LoginFreshResetPassword extends StatefulWidget {
   final Color backgroundColor;

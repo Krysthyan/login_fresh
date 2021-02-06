@@ -1,27 +1,46 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:login_fresh/src/config/language.dart';
-import 'package:login_fresh/src/service/type_login.dart';
 
+import '../config/language.dart';
+import '../service/type_login.dart';
+
+/// Widget main with social networks
 class LoginFresh extends StatefulWidget {
+
+  /// color main login
   final Color backgroundColor;
+
+  ///color of card where are the login icons
   final Color cardColor;
+
+  /// color of text in login
   final Color textColor;
 
+  /// url logo main in login
   final String pathLogo;
 
+  ///button when you want to avoid the login and go to the application content
   final bool isExploreApp;
+
+  ///function when you want to avoid the login and go to the application content
   final Function functionExploreApp;
 
+  ///widget to put a footer in your login
   final bool isFooter;
+
+  /// custom widget footer
   final Widget widgetFooter;
 
+  /// list type login import in login
   final List<LoginFreshTypeLoginModel> typeLoginModel;
 
+  /// is signUp in login
   final bool isSignUp;
+
+  ///widget signUp
   final Widget widgetSignUp;
 
+  //model of key words used in login
   LoginFreshWords keyWord;
 
   LoginFresh(

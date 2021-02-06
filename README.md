@@ -71,25 +71,25 @@ class _MyAppState extends State<MyApp> {
           callFunction: (BuildContext _buildContext) {  
             // develop what they want the facebook to do when the user clicks  
   },  
-          logo: TypeLogo.FACEBOOK),  
+          logo: TypeLogo.facebook),  
       LoginFreshTypeLoginModel(  
           callFunction: (BuildContext _buildContext) {  
             // develop what they want the Google to do when the user clicks  
   },  
-          logo: TypeLogo.GOOGLE),  
+          logo: TypeLogo.google),  
       LoginFreshTypeLoginModel(  
           callFunction: (BuildContext _buildContext) {  
             print("APPLE");  
             // develop what they want the Apple to do when the user clicks  
   },  
-          logo: TypeLogo.APPLE),  
+          logo: TypeLogo.apple),  
       LoginFreshTypeLoginModel(  
           callFunction: (BuildContext _buildContext) {  
             Navigator.of(_buildContext).push(MaterialPageRoute(  
               builder: (_buildContext) => widgetLoginFreshUserAndPassword(),  
             ));  
           },  
-          logo: TypeLogo.USER_PASSWORD),  
+          logo: TypeLogo.userPassword),  
     ];  
   
     return LoginFresh(  
@@ -289,25 +289,25 @@ LoginFresh buildLoginFresh() {
         callFunction: (BuildContext _buildContext) {  
           // develop what they want the facebook to do when the user clicks  
   },  
-        logo: TypeLogo.FACEBOOK),  
+        logo: TypeLogo.facebook),  
     LoginFreshTypeLoginModel(  
         callFunction: (BuildContext _buildContext) {  
           // develop what they want the Google to do when the user clicks  
   },  
-        logo: TypeLogo.GOOGLE),  
+        logo: TypeLogo.google),  
     LoginFreshTypeLoginModel(  
         callFunction: (BuildContext _buildContext) {  
           print("APPLE");  
           // develop what they want the Apple to do when the user clicks  
   },  
-        logo: TypeLogo.APPLE),  
+        logo: TypeLogo.apple),  
     LoginFreshTypeLoginModel(  
         callFunction: (BuildContext _buildContext) {  
           Navigator.of(_buildContext).push(MaterialPageRoute(  
             builder: (_buildContext) => widgetLoginFreshUserAndPassword(),  
           ));  
         },  
-        logo: TypeLogo.USER_PASSWORD),  
+        logo: TypeLogo.userPassword),  
   ];  
   return LoginFresh(  
           pathLogo: 'assets/logo.png',  
@@ -330,7 +330,7 @@ LoginFreshTypeLoginModel(
         callFunction: (BuildContext _buildContext) {  
           // develop what they want the facebook to do when the user clicks  
   },  
-        logo: TypeLogo.FACEBOOK),
+        logo: TypeLogo.facebook),
 ```
 There are two parameters `callFunction, logo`, the first is the function that will be executed when the user clicks that type of login, you can program your code as for example if you want to build a login for` Facebook` within this you do all the functionality and import the necessary libraries. And in addition to this there is the `logo` parameter, this is used to use the` LoginFresh` logos but you can put the logo you want, `logo` is a string where you can put the path of where your image is to put.
 
@@ -344,7 +344,7 @@ LoginFreshTypeLoginModel(
         builder: (_buildContext) => widgetLoginFreshUserAndPassword(),  
       ));  
     },  
-    logo: TypeLogo.USER_PASSWORD),
+    logo: TypeLogo.userPassword),
 ```
 
 
@@ -397,25 +397,25 @@ class _MyAppState extends State<MyApp> {
           callFunction: (BuildContext _buildContext) {  
             // develop what they want the facebook to do when the user clicks  
   },  
-          logo: TypeLogo.FACEBOOK),  
+          logo: TypeLogo.facebook),  
       LoginFreshTypeLoginModel(  
           callFunction: (BuildContext _buildContext) {  
             // develop what they want the Google to do when the user clicks  
   },  
-          logo: TypeLogo.GOOGLE),  
+          logo: TypeLogo.google),  
       LoginFreshTypeLoginModel(  
           callFunction: (BuildContext _buildContext) {  
             print("APPLE");  
             // develop what they want the Apple to do when the user clicks  
   },  
-          logo: TypeLogo.APPLE),  
+          logo: TypeLogo.apple),  
       LoginFreshTypeLoginModel(  
           callFunction: (BuildContext _buildContext) {  
             Navigator.of(_buildContext).push(MaterialPageRoute(  
               builder: (_buildContext) => widgetLoginFreshUserAndPassword(),  
             ));  
           },  
-          logo: TypeLogo.USER_PASSWORD),  
+          logo: TypeLogo.userPassword),  
     ];  
   
     return LoginFresh(  
@@ -614,25 +614,25 @@ LoginFresh buildLoginFresh() {
         callFunction: (BuildContext _buildContext) {  
           // develop what they want the facebook to do when the user clicks  
   },  
-        logo: TypeLogo.FACEBOOK),  
+        logo: TypeLogo.facebook),  
     LoginFreshTypeLoginModel(  
         callFunction: (BuildContext _buildContext) {  
           // develop what they want the Google to do when the user clicks  
   },  
-        logo: TypeLogo.GOOGLE),  
+        logo: TypeLogo.google),  
     LoginFreshTypeLoginModel(  
         callFunction: (BuildContext _buildContext) {  
           print("APPLE");  
           // develop what they want the Apple to do when the user clicks  
   },  
-        logo: TypeLogo.APPLE),  
+        logo: TypeLogo.apple),  
     LoginFreshTypeLoginModel(  
         callFunction: (BuildContext _buildContext) {  
           Navigator.of(_buildContext).push(MaterialPageRoute(  
             builder: (_buildContext) => widgetLoginFreshUserAndPassword(),  
           ));  
         },  
-        logo: TypeLogo.USER_PASSWORD),  
+        logo: TypeLogo.userPassword),  
   ];  
   return LoginFresh(  
           pathLogo: 'assets/logo.png',  
@@ -655,7 +655,7 @@ LoginFreshTypeLoginModel(
         callFunction: (BuildContext _buildContext) {  
           // develop what they want the facebook to do when the user clicks  
   },  
-        logo: TypeLogo.FACEBOOK),
+        logo: TypeLogo.facebook),
 ```
 
 Existen dos parametros  `callFunction, logo`, el primero es la función que se va a ejecutar cuando el usuario pulse ese tipo de login, puedes pogramar tu código como por ejemplo si quieres construir un login para `Facebook` dentro de esta realizas toda la funcionalidad e importas las librerias necesarias. Y adicional a esto hay el parametro `logo`, esto sirve para utilizar los logos de `LoginFresh` pero tu puedes poner el logo que desees, `logo` es un string donde puedes poner el path de donde esta tu imagen a poner.
@@ -668,7 +668,7 @@ LoginFreshTypeLoginModel(
         builder: (_buildContext) => widgetLoginFreshUserAndPassword(),  
       ));  
     },  
-    logo: TypeLogo.USER_PASSWORD),
+    logo: TypeLogo.userPassword),
 ```
 
 
