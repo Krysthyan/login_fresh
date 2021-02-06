@@ -1,8 +1,10 @@
 name: login_fresh
 description: design fresh of login in flutter
-version: 0.0.1
-author: Cristhian Hernandez
-homepage: https://www.softnux.io
+version: 1.0.1
+authors:
+  - Cristhian Hernandez <cristhian.hernandez@softnux.io>
+
+homepage: https://github.com/Krysthyan/login_fresh
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -23,9 +25,8 @@ dev_dependencies:
 flutter:
 
   # To add assets to your package, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images_login_fresh_34_/
   #
   # For details regarding assets in packages, see
   # https://flutter.dev/assets-and-images/#from-packages
