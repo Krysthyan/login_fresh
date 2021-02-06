@@ -17,8 +17,8 @@ flutter run
 
 ## Languages docs
 
- - [English](https://pub.dev/packages/login_fresh#Examples)
- - [Español](https://pub.dev/packages/login_fresh#Ejemplos)
+ - [English](https://pub.dev/packages/login_fresh#examples)
+ - [Español](https://pub.dev/packages/login_fresh#ejemplos)
 
 ## Examples
 
