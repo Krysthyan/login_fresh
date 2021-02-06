@@ -152,7 +152,7 @@ class _MyAppState extends State<MyApp> {
   }  
   
   Widget widgetFooter() {  
-    return FooterLogin(  
+    return LoginFreshFooter(  
       logo: 'assets/logo_footer.png',  
       text: 'Power by',  
       funFooterLogin: () {  
@@ -478,7 +478,7 @@ class _MyAppState extends State<MyApp> {
   }  
   
   Widget widgetFooter() {  
-    return FooterLogin(  
+    return LoginFreshFooter(  
       logo: 'assets/logo_footer.png',  
       text: 'Power by',  
       funFooterLogin: () {  
