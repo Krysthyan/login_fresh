@@ -15,9 +15,9 @@ cd login_fresh/demo
 flutter run
 ```
 
-![image](screenshot/image1.jpeg)         | ![image](screenshot/image2.jpeg)
+![Capture 1](https://github.com/Krysthyan/login_fresh/blob/main/screenshot/image1.jpeg)         | ![Capture 2](https://github.com/Krysthyan/login_fresh/blob/main/screenshot/image2.jpeg)
 :-------------------------:|:-------------------------:
-![image](screenshot/image3.jpeg) |  ![image](screenshot/image4.jpeg)
+![Capture 3](https://github.com/Krysthyan/login_fresh/blob/main/screenshot/image3.jpeg) |  ![Capture 4](https://github.com/Krysthyan/login_fresh/blob/main/screenshot/image4.jpeg)
 
 
 
